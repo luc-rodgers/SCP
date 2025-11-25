@@ -6,7 +6,7 @@ import TimeInput from "./TimeInput";
 import TextInput from "./TextInput";
 
 export default function AllowanceTable({ title, rows, onChangeRow, defaultCollapsed = true, printMode = false }) {
-  const [open, setOpen] = useState(!defaultCollapsed ? true : false);
+  const [open, setOpen] = useState(!defaultCollapsed);
   const totalMinutes = rows.reduce((acc, r) => acc + diffMinutes(r.start, r.finish), 0);
   const totalHoursStr = minutesToHours(totalMinutes);
 

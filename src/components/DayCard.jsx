@@ -18,7 +18,7 @@ export default function DayCard({
   weekEnding,
   projects = [],
 }) {
-  const [open, setOpen] = useState(!defaultCollapsed ? true : false);
+  const [open, setOpen] = useState(!defaultCollapsed);
 
   // Compute date string (e.g., Feb 10, 2025)
   const sunday = weekEnding ? new Date(weekEnding) : null;

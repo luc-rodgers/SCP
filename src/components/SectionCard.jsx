@@ -5,7 +5,10 @@ export default function SectionCard({ title, right, children, onClickTitle }) {
     <div className="flex items-center justify-between w-full">
       <div className="text-lg font-semibold w-full">
         {typeof title === "string" ? (
-          <div className={onClickTitle ? "cursor-pointer text-blue-700" : ""} onClick={onClickTitle}>
+          <div 
+            className={onClickTitle ? "cursor-pointer text-blue-700" : ""} 
+            onClick={onClickTitle ? onClickTitle : undefined}
+          >
             {title}
           </div>
         ) : (

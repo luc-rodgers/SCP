@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo } from "react";
 import useLocalStorage from "../hooks/useLocalStorage";
 import { defaultWeek } from "../utils/defaults";
 import { dayTotalMinutes, minutesToHours } from "../utils/time";

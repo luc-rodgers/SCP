@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import { buildIntervals } from "../utils/time";
 
 export default function TimeInput({ value, onChange, label, ...props }) {
-  const intervals = useMemo(buildIntervals, []);
+  const intervals = useMemo(() => buildIntervals(), []);
   
   const selectElement = (
     <select
