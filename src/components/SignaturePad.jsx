@@ -21,16 +21,14 @@ export default function SignaturePad({ value, onChange }) {
     const start = (e) => {
       drawing.current = true;
       const { x, y } = getPos(e);
-      const ctx2 = c.getContext("2d");
-      ctx2.beginPath();
-      ctx2.moveTo(x, y);
+      ctx.beginPath();
+      ctx.moveTo(x, y);
     };
     const move = (e) => {
       if (!drawing.current) return;
       const { x, y } = getPos(e);
-      const ctx2 = c.getContext("2d");
-      ctx2.lineTo(x, y);
-      ctx2.stroke();
+      ctx.lineTo(x, y);
+      ctx.stroke();
     };
     const end = () => {
       if (!drawing.current) return;
